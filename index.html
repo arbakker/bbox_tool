@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>BBOX Tool</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta name="description" content="transform interaction for OL3" />
+  <meta name="keywords" content="ol3, vector, transform, rotate, scale, stretch" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://rawgit.com/FortAwesome/Font-Awesome/master/css/font-awesome.min.css" type="text/css" />
+
+  <!-- OL3 -->
+  <link rel="stylesheet" href="https://openlayers.org/en/master/css/ol.css" />
+  <script type="text/javascript" src="https://openlayers.org/en/master/build/ol.js"></script>
+  
+  <!-- controls -->
+  <script type="text/javascript" src="../interaction/transforminteraction.js"></script>
+  
+
+
+
+</head>
+<body >
+  <!-- Map div -->
+  <div id="map" style="width:100%; height:50vh;"></div>
+  <div class="coordinates" >
+  <h2>Coordinates:</h2>
+  <h3>GeoJSON:</h3>
+   <textarea style="width:100%;" id="pol_coords" disabled="disabled">
+  </textarea>
+  <h3>CSV:</h3>
+   <textarea  style="width:100%;" id="pol_coords_2">
+    ></textarea> 
+    <button id="change_geom">Change</button>
+  </p>
+  <p id="info"></p>
+  </div>
+  <div class="coordinates" >
+  <h2>Coordinate system:</h2>
+    <select id="coord_drop" name="coord_drop">
+      <option selected="selected" value="3857">3857</option>
+      <option value="4326">4326</option>
+    </select>
+  </div>  
+
+
+  <!--
+  <div class="options" >
+    <h2>Options:</h2>
+    <ul><li>
+      <input id="style" type="checkbox" onchange="setHandleStyle()" /><label for="style"> styles transform handles (using fontawesome)</label>
+    </li><li>
+      <input id="scale" type="checkbox" onchange="setPropertie(this.id);" checked="checked" /><label for="scale"> enable scale</label>
+    </li><li>
+      <input id="stretch" type="checkbox" onchange="setPropertie(this.id);" checked="checked" /><label for="stretch"> enable stretch</label>
+    </li><li>
+      <input id="rotate" type="checkbox" onchange="setPropertie(this.id);" checked="checked" /><label for="rotate"> enable rotate</label>
+    </li><li>
+      <input id="translate" type="checkbox" onchange="setPropertie(this.id);" checked="checked" /><label for="translate"> enable translate</label>
+    </li><li>
+      <input id="translateFeature" type="checkbox" onchange="setPropertie(this.id);" /><label for="translateFeature"> translate when click on feature</label>
+    </li><li>
+      <input id="keepAspectRatio" type="checkbox" onchange="setAspectRatio(this.id);" /><label for="keepAspectRatio"> force keepAspectRatio (default use <i>Shift</i>)</label>
+    </li><li>
+      <hr/>
+      Use <i>Shift</i> key to preserve proportions when scaling (see keepAspectRatio).
+      <br />
+      Use <i>Ctrl</i> key to modify the center when scaling.
+    </li></ul>
+    <div style="background:white; padding:0 0.45em;"><span id="info"></span>&nbsp;</div>
+  </div>-->
+  <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
